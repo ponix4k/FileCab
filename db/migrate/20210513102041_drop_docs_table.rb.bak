@@ -1,0 +1,9 @@
+class DropDocsTable < ActiveRecord::Migration[6.1]
+  def up
+	drop_table :docs
+  end
+  
+  def down
+    raise ActiveRecord::IrreversibleMigration
+  end
+end
