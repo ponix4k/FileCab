@@ -1,0 +1,19 @@
+$dark_gray: #2B2E2E;
+$light_gray: #C0C1C1;
+$green: #8dcc52;
+
+*{
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+    padding-top: 4.5rem;
+    font-family: 'Dosis', sans-serif;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
