@@ -30,18 +30,6 @@ body {
   background-color: $background-color;
 }
 
-form {
-  width: 100%;
-  height: 450px;
-  margin: auto;
-  position: relative;
-}
-
-input {
-  padding-left: 10px;
-  width: 100%;
-  height: 25px;
-}
 #main-wrapper {
   background-color: $main-wrapper-bg;
 }
@@ -52,7 +40,7 @@ input {
   padding-bottom: 2%;
 }
 
-#nav-bar {
+#title {
   padding: 10px;
   margin: 10px 10px 10px 24%;
   color: $nav-font-color;
@@ -88,17 +76,43 @@ input {
   width: 50%;
   border: solid 1px;
 
+  a {
+    text-decoration: none;
+    color: $post-container-font-color;
+  }
+
   .post-title {
+    display: grid;
+    grid-template-columns: 15% 85%;
     padding-top: 0px;
+    margin-right: 10%;
+
+    .left-align {
+      grid-row: 1 / span 1;
+      text-align: left;
+      padding-bottom: 10px;
+    }
+
     h2 {
       padding: 0px;
-      margin: 0px;
+
+      p.tiny-font {
+        font-size: 0.75rem;
+      }
       a {
         text-decoration: none;
-        color: #fff;
+        color: $post-container-font-color;
       }
     }
+    .options {
+      grid-row: 2 / span 1;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
   }
+
   .post-content {
     p {
       padding: 5px;
@@ -109,22 +123,25 @@ input {
     background-color: #3a3b3b57;
     border-radius: 15px;
   }
+
   .post-footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0px;
     padding: 0px;
 
-    p.tiny-font-right {
-      text-align: right;
-      margin: 0 0 0 190;
-      padding-bottom: 10px;
+    p.tiny-font {
       font-size: 0.75rem;
     }
 
-    p.tiny-font-left {
+    .right-align {
+      text-align: right;
+      margin: 0 0 0 190;
+      padding-bottom: 10px;
+    }
+
+    .left-align {
       text-align: left;
-      font-size: 0.75rem;
       margin: 0px;
       padding-bottom: 10px;
     }

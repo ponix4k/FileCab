@@ -2,6 +2,6 @@
 <p> <%= @doc.content %> </p>
 
 <%= link_to "All Docs", docs_path%>
-<%= link_to "Fix Doc", edit_doc_path(@doc) %>
-<%= link_to "Trash it", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to '<i class="far fa-edit"></i>'.html_safe, edit_doc_path(@doc) %>
+<%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" } %>
 

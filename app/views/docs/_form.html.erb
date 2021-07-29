@@ -1,5 +1,14 @@
-<%= simple_form_for @doc do |f| %>
-  <%= f.input :title  %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
+<div id="main-wrapper">
+  <div id="page-wrapper">
+    <%= simple_form_for @doc do |f| %>
+      <%= f.label :title, 'Post Title' %> <br>
+      <%= f.input_field :title, wrapper_html: {class: 'title-input'} %>
+      <br>
+      <br>
+      <%= f.label :content, 'Post Content' %> <br>
+      <%= f.input_field :content, wrapper_html: {class: 'content-input'} %>
+      <br>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

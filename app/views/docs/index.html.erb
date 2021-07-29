@@ -1,21 +1,25 @@
 <div id="main-wrapper">
   <div id="nav-bar">
-  <ul>
-    <li class="fa-file-icon"><%= link_to 'New' , new_doc_path %></li>
-  </ul>
   </div>
   <div id="page-wrapper">
    <h1> Current Blog Posts </h1>
+   <div class="title">
+     <ul>
+        <li><%= link_to  '<i class="far fa-file"></i>'.html_safe, new_doc_path %></li>
+     </ul>
+     </div>
     <% @docs.each do |doc| %>
     <div id="post-container">
       <div class="post-title">
         <h2> <%= link_to doc.title, doc %></h2>
+        <p class="tiny-font left-align option"><%= link_to '<i class="far fa-edit"></i>'.html_safe, edit_doc_path(doc) %>
+        <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, doc_path(doc), method: :delete, data: { confirm: "Are you sure?" } %> </p>
       </div>
       <div class="post-content">
         <p><%= truncate(doc.content,length:150) %> </p>
         <div class ="post-footer">
-        <p class="tiny-font-left">Posted by USER</p>
-        <p class="tiny-font-right"> <%= time_ago_in_words(doc.created_at) %> ago</p>
+        <p class="tiny-font left-align">Posted by USER</p>
+        <p class="tiny-font right-align option"> <i class="far fa-clock"></i> <%= time_ago_in_words(doc.created_at) %> ago</p><br>
       </div>
       </div>
     </div>
