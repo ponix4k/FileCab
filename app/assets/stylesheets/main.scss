@@ -1,0 +1,137 @@
+/* Colour Pallette */
+$background-color: #181c1f;
+$font-color: #fff;
+
+/* Navbar CSS */
+$nav-bg-color: #262e32;
+$nav-font-color: #fff;
+
+/* Main Wrapper */
+$main-wrapper-bg: #39464a;
+
+/* Page Wrapper */
+$page-wrapper-bg: #536668;
+
+/* Post-container CSS */
+$post-container-bg: #586b6a;
+$post-container-font-color: #fff;
+
+$post-content-bg: #567a79;
+
+* {
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+body {
+  background-color: $background-color;
+}
+
+form {
+  width: 100%;
+  height: 450px;
+  margin: auto;
+  position: relative;
+}
+
+input {
+  padding-left: 10px;
+  width: 100%;
+  height: 25px;
+}
+#main-wrapper {
+  background-color: $main-wrapper-bg;
+}
+
+#page-wrapper {
+  background-color: $page-wrapper-bg;
+  margin: 5%;
+  padding-bottom: 2%;
+}
+
+#nav-bar {
+  padding: 10px;
+  margin: 10px 10px 10px 24%;
+  color: $nav-font-color;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li a {
+    float: left;
+    padding: 0 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  li a:hover {
+    background-color: rgb(225, 0, 255);
+    color: green;
+  }
+}
+
+#post-container {
+  padding: 10px;
+  margin: 2% 12% 2% 25%;
+  background: rgb(0, 69, 60);
+  background: linear-gradient(180deg, rgba(0, 69, 60, 1) 0%, rgba(70, 114, 95, 1) 100%);
+  color: $post-container-font-color;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  text-transform: capitalize;
+  width: 50%;
+  border: solid 1px;
+
+  .post-title {
+    padding-top: 0px;
+    h2 {
+      padding: 0px;
+      margin: 0px;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+  .post-content {
+    p {
+      padding: 5px;
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+
+    background-color: #3a3b3b57;
+    border-radius: 15px;
+  }
+  .post-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0px;
+    padding: 0px;
+
+    p.tiny-font-right {
+      text-align: right;
+      margin: 0 0 0 190;
+      padding-bottom: 10px;
+      font-size: 0.75rem;
+    }
+
+    p.tiny-font-left {
+      text-align: left;
+      font-size: 0.75rem;
+      margin: 0px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+#page-footer {
+  height: 5%;
+  background-color: #000;
+}

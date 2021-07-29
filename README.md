@@ -1,4 +1,4 @@
-## FileCab
+ab
 
 
 File Cabinet for Practising Ruby On Rails
@@ -12,8 +12,8 @@ To Do List
 ---
 
 - [ ] Create User Controls
-- [ ] Restrict viewable content to user that created it
-
-Issues
----
-on a fresh install the was initally an issue with the web packer run the following command `rails webpacker:install`
+- - [ ] Restrict viewable content to user that created it
+-
+- Issues
+- ---
+- on a fresh install the was initally an issue with the web packer run the following command `rails webpacker:install`

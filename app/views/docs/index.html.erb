@@ -1,9 +1,25 @@
-<% @docs.each do |doc| %>
-
-  <h2> <%= link_to doc.title, doc %> </h2>
-  <p> <%= time_ago_in_words(doc.created_at) %> </p>
-  <p> <%= truncate(doc.content, length:50) %> </p>
-
-<% end %>
-
-<%= link_to "Create Doc" , new_doc_path%>
+<div id="main-wrapper">
+  <div id="nav-bar">
+  <ul>
+    <li class="fa-file-icon"><%= link_to 'New' , new_doc_path %></li>
+  </ul>
+  </div>
+  <div id="page-wrapper">
+   <h1> Current Blog Posts </h1>
+    <% @docs.each do |doc| %>
+    <div id="post-container">
+      <div class="post-title">
+        <h2> <%= link_to doc.title, doc %></h2>
+      </div>
+      <div class="post-content">
+        <p><%= truncate(doc.content,length:150) %> </p>
+        <div class ="post-footer">
+        <p class="tiny-font-left">Posted by USER</p>
+        <p class="tiny-font-right"> <%= time_ago_in_words(doc.created_at) %> ago</p>
+      </div>
+      </div>
+    </div>
+    <% end %>
+  <div id="page-footer"></div>
+  </div>
+</div>
