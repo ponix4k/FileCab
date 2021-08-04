@@ -1,5 +1,5 @@
 /* Colour Pallette */
-$background-color: #181c1f;
+$background-color: #313436;
 $font-color: #fff;
 
 /* Navbar CSS */
@@ -32,12 +32,48 @@ body {
 
 #main-wrapper {
   background-color: $main-wrapper-bg;
+  box-shadow: 5px 5px 5px 2px #0d0d0c;
 }
 
 #page-wrapper {
   background-color: $page-wrapper-bg;
   margin: 5%;
   padding-bottom: 2%;
+}
+
+#page-nav-bar {
+  display: grid;
+  grid-template-columns: 25%, 25%;
+  margin: 0 25%;
+  padding: 0 25px;
+
+  color: $font-color;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      width: 50px;
+      .page-nav-button-top {
+        padding: 10px 25%;
+      }
+
+      .page-nav-button-bottom {
+        font-size: 1rem;
+        padding: 0 10%;
+      }
+
+      a {
+        margin: 6px;
+        color: $font-color;
+        font-size: 1.25rem;
+      }
+    }
+
+    li:hover {
+      background-color: #e6e6a8;
+    }
+  }
 }
 
 #title {
@@ -75,6 +111,7 @@ body {
   text-transform: capitalize;
   width: 50%;
   border: solid 1px;
+  box-shadow: 5px 5px 5px 2px #0d0d0c;
 
   a {
     text-decoration: none;
@@ -104,6 +141,7 @@ body {
         color: $post-container-font-color;
       }
     }
+
     .options {
       grid-row: 2 / span 1;
       grid-column-start: 3;
